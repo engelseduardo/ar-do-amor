@@ -1,0 +1,42 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <meta charset="utf-8">  
+  <title>Para o meu Amor Geovanna ❤️</title>  
+  <!-- Importa A-Frame e AR.js -->  
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>  
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>  
+  <style>  
+    body { margin: 0; overflow: hidden; }  
+  </style>  
+</head>  
+
+<body>  
+  <!-- Cena AR -->  
+  <a-scene embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;">  
+    <!-- Marcador "hiro" (imprima o link acima) -->  
+    <a-marker preset="hiro">  
+      <!-- Mensagem 3D -->  
+      <a-text 
+        value="Eu te amo um muito grandaaaaaao" 
+        position="-1 1 0" 
+        color="#FF0066" 
+        align="center"
+      ></a-text>  
+      <!-- Coração 3D -->  
+      <a-entity 
+        gltf-model="https://ar-js-org.github.io/AR.js/aframe/examples/image-tracking/nft/assets/heart/scene.gltf" 
+        scale="0.5 0.5 0.5" 
+        position="0 0.5 0" 
+      ></a-entity>  
+    </a-marker>  
+    <!-- Câmera -->  
+    <a-entity camera></a-entity>  
+  </a-scene>  
+
+  <!-- Instruções -->  
+  <div style="position: fixed; bottom: 20px; width: 100%; text-align: center; color: white; font-family: Arial; background: rgba(0,0,0,0.5);">  
+    Aponte a câmera para o marcador "HIRO".  
+  </div>  
+</body>  
+</html>  
